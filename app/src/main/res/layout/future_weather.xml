@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp">
+
+    <TextView
+        android:id="@+id/future_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="周六"
+        android:textSize="20dp"/>
+    <TextView
+        android:id="@+id/future_condition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="晴"
+        android:textSize="20dp"
+        android:layout_toRightOf="@id/future_data"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/future_temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15°C~5°C"
+        android:gravity="center_horizontal|left"
+        android:textSize="20dp"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#E0E0E0"
+        android:layout_below="@id/future_data"
+        android:layout_marginTop="10dp"/>
+
+
+</RelativeLayout>

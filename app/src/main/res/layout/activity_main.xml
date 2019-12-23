@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_layout"
+    tools:context=".MainActivity"
+    android:orientation="horizontal"
+    android:background="@mipmap/bg">
+
+    <!-->底部状态栏<-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/main_buttom">
+
+        <ImageView
+            android:id="@+id/main_city_add"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/icon_add" />
+
+        <ImageView
+            android:id="@+id/main_more"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/icon_more"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/main_buttom_print"
+            android:orientation="horizontal"
+            android:layout_centerInParent="true">
+        </LinearLayout>
+    </RelativeLayout>
+    <!-->页面切换，不同城市  <-->
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/main_vp"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:layout_above="@id/main_buttom">
+    </androidx.viewpager.widget.ViewPager>
+</RelativeLayout>
