@@ -14,6 +14,7 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 
 import com.google.gson.Gson;
+import com.yaoboxue.weather.Base.BaseFragment;
 import com.yaoboxue.weather.Bean.WeatherBean;
 import com.yaoboxue.weather.DB.DBmanager;
 

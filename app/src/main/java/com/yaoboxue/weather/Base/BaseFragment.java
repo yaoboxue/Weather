@@ -1,4 +1,4 @@
-package com.yaoboxue.weather;
+package com.yaoboxue.weather.Base;
 
 import androidx.fragment.app.Fragment;
 

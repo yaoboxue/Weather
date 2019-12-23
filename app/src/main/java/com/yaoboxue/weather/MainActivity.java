@@ -1,5 +1,6 @@
 package com.yaoboxue.weather;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -9,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+import com.yaoboxue.weather.City_manager.CityManagerActivity;
 import com.yaoboxue.weather.DB.DBmanager;
 
 import java.util.ArrayList;
@@ -44,6 +46,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if (cityList.size()==0) {
             cityList.add("成都");
+            cityList.add("长沙");
+            cityList.add("北京");
         }
         //初始化ViewPager
         initPages();
@@ -69,10 +73,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             @Override
             public void onPageSelected(int position) {
-                for (int i = 0; i < imgList.size(); i++) {
+              /* for (int i = 0; i < imgList.size(); i++) {
                     imgList.get(i).setImageResource(R.mipmap.a1);
                 }
-                imgList.get(position).setImageResource(R.mipmap.a2);
+                imgList.get(position).setImageResource(R.mipmap.a2);*/
             }
 
             @Override
@@ -109,14 +113,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        Intent intent = new Intent();
         //判断哪个按钮被点击
         switch (v.getId()){
             case R.id.main_city_add:
+                intent.setClass(this, CityManagerActivity.class);
                 break;
 
             case R.id.main_more:
                 break;
 
         }
+        startActivity(intent);
     }
 }

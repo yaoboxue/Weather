@@ -8,7 +8,7 @@
     <uses-permission android:name="REAN_PHONE_STATE" />
 
     <application
-        android:name=".UniteApp"
+        android:name=".Base.UniteApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -16,7 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".CityManagerActivity"></activity>
+        <activity android:name=".City_manager.DeleteCityActivity"></activity>
+        <activity android:name=".City_manager.SearchCityActivity" />
+        <activity android:name=".City_manager.CityManagerActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
