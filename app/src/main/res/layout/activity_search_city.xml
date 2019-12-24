@@ -22,7 +22,7 @@
         android:padding="3dp"
         android:layout_toLeftOf="@id/search_submit"
         android:layout_below="@id/search_editText"
-        android:text="搜索国内城市"
+        android:hint="搜索国内城市"
         android:background="@drawable/search"/>
 
     <TextView

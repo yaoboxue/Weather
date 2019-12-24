@@ -67,10 +67,10 @@ public class CityWeatherFragment extends BaseFragment implements View.OnClickLis
         Log.v(TAG,"获取成功");
         parseShowData(result);
         //更新数据
-        int i = DBmanager.updataInfoByCity(city,result);
+       int i = DBmanager.updataInfoByCity(city,result);
         if (i<=0){
             //更新数据库失败,说明没有这个城市，增加这个城市记录；
-            DBmanager.addCityInfo(city,result);
+           DBmanager.addCityInfo(city,result);
 
         }
         Log.v(TAG,result);
@@ -79,7 +79,7 @@ public class CityWeatherFragment extends BaseFragment implements View.OnClickLis
     @Override
     public void onError(Throwable ex, boolean isOnCallback) {
         //查找上一次的城市信息显示在Fragmentz中
-        String s = DBmanager.querryInfoByCity(city);
+       String s = DBmanager.querryInfoByCity(city);
         if (!TextUtils.isEmpty(s)) {
             parseShowData(s);
         }

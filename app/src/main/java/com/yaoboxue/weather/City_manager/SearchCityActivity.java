@@ -1,7 +1,5 @@
 package com.yaoboxue.weather.City_manager;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -31,6 +29,8 @@ public class SearchCityActivity extends BaseActivity implements View.OnClickList
     String url2 = "&key=62057c230200c5151e6479e3ae074b48";
 
     String city;
+
+    private ArrayAdapter<String> adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -39,9 +39,10 @@ public class SearchCityActivity extends BaseActivity implements View.OnClickList
         search = findViewById(R.id.search_editText);
         submit = findViewById(R.id.search_submit);
         search_hot = findViewById(R.id.search_gridView);
+        submit.setOnClickListener(this);
 
         //设置适配器
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, R.layout.item_hot_city, hotCitys);
+        adapter = new ArrayAdapter<>(this, R.layout.item_hot_city, hotCitys);
         search_hot.setAdapter(adapter);
 
         setListener();

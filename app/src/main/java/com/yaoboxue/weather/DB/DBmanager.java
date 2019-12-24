@@ -80,4 +80,9 @@ public class DBmanager {
         }
         return list;
     }
+
+    //根据城市名称删除数据
+    public static int deleteInfoByCity(String city){
+       return database.delete("info","city=?",new String[]{city});
+    }
 }

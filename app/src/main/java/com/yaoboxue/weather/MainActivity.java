@@ -134,4 +134,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         startActivity(intent);
     }
+    /*
+    页面从新加载时调用的函数
+    获取焦点之前调用
+    在此处完成ViewPager更新
+     */
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        //获取数据库中剩下的城市
+        List<String> list = DBmanager.querryAllCity();
+        if (list.size()==0){
+            list.add("长沙");
+        }
+        //重新加载前清空以前的
+        cityList.clear();
+        cityList.addAll(list);
+        //剩余城市创建对应的fragment页面
+        fragmentList.clear();
+        initPages();
+
+        adapter.notifyDataSetChanged();
+    }
 }
