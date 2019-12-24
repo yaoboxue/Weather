@@ -114,7 +114,7 @@
                 <TextView
                     android:id="@+id/index_cold"
                     style="@style/indexText"
-                    android:text="感冒指数"
+                    android:text="旅游指数"
                     android:drawableBottom="@mipmap/icon_ganmao"/>
             </LinearLayout>
             <ImageView

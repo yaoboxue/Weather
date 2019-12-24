@@ -2,6 +2,7 @@ package com.yaoboxue.weather;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -45,9 +46,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imgList = new ArrayList<>();
 
         if (cityList.size()==0) {
-            cityList.add("成都");
             cityList.add("长沙");
-            cityList.add("北京");
+
+        }
+        /*
+        获取搜索界面传过来的值
+         */
+        Intent intent = getIntent();
+        String city = intent.getStringExtra("city");
+        if (!cityList.contains(city)&&!TextUtils.isEmpty(city)) {
+            cityList.add(city);
         }
         //初始化ViewPager
         initPages();
