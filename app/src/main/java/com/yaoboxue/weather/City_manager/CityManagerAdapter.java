@@ -55,7 +55,7 @@ public class CityManagerAdapter extends BaseAdapter {
         WeatherBean.ResultBean.TodayBean todayBean = weatherBean.getResult().getToday();
         holder.ConditionTex.setText("天气"+todayBean.getWeather());
         WeatherBean.ResultBean.SkBean skBean = weatherBean.getResult().getSk();
-        holder.currentemTex.setText("温度"+skBean.getTemp());
+        holder.currentemTex.setText(skBean.getTemp()+"℃");
         holder.windTex.setText(todayBean.getWind());
         holder.temRangTex.setText(todayBean.getTemperature());
         return convertView;

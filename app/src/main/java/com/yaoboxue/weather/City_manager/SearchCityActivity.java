@@ -22,11 +22,13 @@ public class SearchCityActivity extends BaseActivity implements View.OnClickList
     ImageView submit;
     GridView search_hot;
 
+    private static final String Key = "&key2e31145cf26d21ea96ee73beb920185a";
+
     String[]hotCitys = {"北京","上海","广州","深圳","珠海","佛山","南京","苏州","厦门","长沙","成都","福州",
             "杭州","武汉","青岛","西安","太原","沈阳","重庆","天津","南宁"};
 
     String url1 = "http://v.juhe.cn/weather/index?format=2&cityname=";
-    String url2 = "&key=62057c230200c5151e6479e3ae074b48";
+    String url2 = "&key=2e31145cf26d21ea96ee73beb920185a";
 
     String city;
 

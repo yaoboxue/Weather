@@ -23,6 +23,7 @@
         android:layout_toLeftOf="@id/search_submit"
         android:layout_below="@id/search_editText"
         android:hint="搜索国内城市"
+        android:maxLines="1"
         android:background="@drawable/search"/>
 
     <TextView

@@ -26,6 +26,7 @@ import java.util.List;
 
 public class CityWeatherFragment extends BaseFragment implements View.OnClickListener {
     private static final String TAG = "MainActivity";
+    private static final String Key = "&key2e31145cf26d21ea96ee73beb920185a";
 
     TextView temptex, citytex, conditiontex, windtex, temprangtex, datatex, clothindexTex, carIndexTex, coldIndexTex, sportIndexTex, raysIndexTex;
     ImageView dayIma;
@@ -34,7 +35,7 @@ public class CityWeatherFragment extends BaseFragment implements View.OnClickLis
     WeatherBean.ResultBean.TodayBean indexList = new WeatherBean.ResultBean.TodayBean();
 
     String url1 = "http://v.juhe.cn/weather/index?format=2&cityname=";
-    String url2 = "&key=62057c230200c5151e6479e3ae074b48";
+    String url2 = "&key=2e31145cf26d21ea96ee73beb920185a";
 
     String city;
     @Override
@@ -93,7 +94,7 @@ public class CityWeatherFragment extends BaseFragment implements View.OnClickLis
         indexList = resultsBean.getToday();
         Log.v(TAG,indexList.getCity());
         //设置textVlew
-        datatex.setText(indexList.getDate_y());
+        datatex.setText(indexList.getDate_y()+indexList.getWeek());
         Log.v(TAG,"日期"+indexList.getDate_y());
         citytex.setText(indexList.getCity());
         //获取今日天气情况
@@ -102,7 +103,7 @@ public class CityWeatherFragment extends BaseFragment implements View.OnClickLis
         temprangtex.setText(indexList.getTemperature());
         conditiontex.setText(indexList.getWeather());
         //获取实时天气情况
-        temptex.setText(resultsBean.getSk().getTemp());
+        temptex.setText(resultsBean.getSk().getTemp()+"℃");
         Log.v(TAG,resultsBean.getSk().getTemp());
         //显示天气情况得图片
         //Picasso.with(getActivity()).load(currentDataBean.getDayPictureUrl()).into(dayIma);

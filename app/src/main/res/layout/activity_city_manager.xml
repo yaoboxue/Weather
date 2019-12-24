@@ -53,13 +53,12 @@
 
     <ImageView
         android:id="@+id/city_add"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/icon_add"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/plussymbol"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
         android:layout_margin="30dp"
-        android:background="#87CE8B"
         android:padding="3dp"/>
 
 
