@@ -225,15 +225,14 @@
                     style="@style/indexText"/>
             </LinearLayout>
         </LinearLayout>
-        <LinearLayout
-            android:id="@+id/frg_lineChart"
-            android:layout_width="match_parent"
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="2dp"
+            android:id="@+id/recycler_view"
+            android:background="#2196F3"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="15dp"
-            android:layout_margin="30dp"
-            android:background="#03A9F4">
-        </LinearLayout>
+            android:layout_margin="10dp">
+        </androidx.recyclerview.widget.RecyclerView>
     </LinearLayout>
 </ScrollView>
 </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
