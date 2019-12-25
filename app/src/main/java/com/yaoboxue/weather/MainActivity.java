@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.viewpager.widget.ViewPager;
 
 import com.yaoboxue.weather.City_manager.CityManagerActivity;
@@ -19,6 +20,7 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
+    private SwipeRefreshLayout swipeRefreshLayout;
     private ImageView addCity,more;
     private LinearLayout pointLayout;
     private ViewPager mianVp;
@@ -134,6 +136,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         startActivity(intent);
     }
+
     /*
     页面从新加载时调用的函数
     获取焦点之前调用

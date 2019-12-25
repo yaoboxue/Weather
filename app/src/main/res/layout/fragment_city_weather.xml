@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/swipe_refresh"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<ScrollView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFEB3B"
@@ -44,6 +50,14 @@
             android:text="2019-12-3"/>
 
         <TextView
+             android:id="@+id/frg_current_timing"
+             style="@style/todayItem"
+             android:text="12:00"
+             android:layout_below="@id/frg_current_weather"
+             android:layout_toRightOf="@id/frg_current_time"
+             android:layout_marginLeft="10dp"/>
+
+        <TextView
             android:id="@+id/frg_current_wind"
             style="@style/todayItem"
             android:layout_below="@id/frg_current_time"
@@ -69,7 +83,7 @@
              android:layout_width="120dp"
              android:layout_height="120dp"
              android:layout_marginTop="20dp"
-             android:layout_marginRight="20dp"
+             android:layout_marginRight="10dp"
              android:layout_alignParentRight="true"
              android:src="@drawable/oldman"/>
             <ImageView
@@ -211,6 +225,15 @@
                     style="@style/indexText"/>
             </LinearLayout>
         </LinearLayout>
+        <LinearLayout
+            android:id="@+id/frg_lineChart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="15dp"
+            android:layout_margin="30dp"
+            android:background="#03A9F4">
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>
-
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

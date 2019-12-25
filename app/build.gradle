@@ -35,4 +35,7 @@ dependencies {
     implementation files('libs/commons-beanutils-1.9.4.jar')
     implementation files('libs/commons-beanutils-1.9.4-javadoc.jar')
     implementation 'androidx.cardview:cardview:1.0.0'
+
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
 }

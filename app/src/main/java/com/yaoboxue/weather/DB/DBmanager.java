@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DBmanager {
+    private static final String TAG = "DB";
     public static SQLiteDatabase database;
     /*
     初始化数据库

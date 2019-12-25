@@ -28,7 +28,7 @@ public class SearchCityActivity extends BaseActivity implements View.OnClickList
             "杭州","武汉","青岛","西安","太原","沈阳","重庆","天津","南宁"};
 
     String url1 = "http://v.juhe.cn/weather/index?format=2&cityname=";
-    String url2 = "&key=2e31145cf26d21ea96ee73beb920185a";
+    String url2 = "&key=8c1c69f446886d0656af1c89161aed0c";
 
     String city;
 
